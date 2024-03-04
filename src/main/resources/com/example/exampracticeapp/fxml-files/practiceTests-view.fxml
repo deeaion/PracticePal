@@ -10,21 +10,21 @@
 
 <AnchorPane prefHeight="574.0" prefWidth="600.0" style="-fx-background-color: #020c14;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exampracticeapp.Controller.PracticeTestsController">
    <children>
-      <AnchorPane layoutX="23.0" layoutY="117.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="556.0" style="-fx-border-color: #ffffff; -fx-border-width: 2; -fx-border-radius: 4;">
+      <AnchorPane layoutX="7.0" layoutY="117.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="589.0" style="-fx-border-color: #ffffff; -fx-border-width: 2; -fx-border-radius: 4;">
          <children>
-            <VBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="3.0" prefHeight="258.0" prefWidth="545.0" spacing="8.0">
+            <VBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="3.0" prefHeight="266.0" prefWidth="545.0" spacing="8.0">
                <children>
-                  <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="538.0" spacing="10.0">
+                  <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="519.0" spacing="10.0">
                      <children>
                         <Label prefHeight="52.0" prefWidth="247.0" text="SUBJECT:" textFill="WHITE">
                            <font>
                               <Font name="Copperplate Gothic Bold" size="21.0" />
                            </font>
                         </Label>
-                        <TextField alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="298.0" />
+                        <TextField alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="304.0" />
                      </children>
                   </HBox>
-                  <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="538.0" spacing="10.0">
+                  <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="567.0" spacing="10.0">
                      <children>
                         <Label prefHeight="52.0" prefWidth="252.0" text="NR. OF QUESTIONS:" textFill="WHITE">
                            <font>
@@ -53,6 +53,11 @@
             </VBox>
          </children>
       </AnchorPane>
-      <Button layoutX="236.0" layoutY="383.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="START TEST" />
+      <Button layoutX="235.0" layoutY="399.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="START TEST" />
+      <Label alignment="TOP_CENTER" layoutX="176.0" layoutY="65.0" prefHeight="52.0" prefWidth="247.0" text="Practice tests" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="21.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

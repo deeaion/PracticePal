@@ -9,31 +9,30 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="574.0" prefWidth="600.0" style="-fx-background-color: #0d1b3d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exampracticeapp.Controller.RandomizeController">
    <children>
-      <AnchorPane layoutX="16.0" layoutY="127.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="573.0" style="-fx-border-color: #ffffff; -fx-border-width: 2; -fx-border-radius: 4;">
+      <AnchorPane layoutX="6.0" layoutY="127.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="589.0" style="-fx-border-color: #ffffff; -fx-border-width: 2; -fx-border-radius: 4;">
          <children>
-            <VBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="3.0" prefHeight="258.0" prefWidth="545.0" spacing="8.0">
+            <VBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="3.0" prefHeight="266.0" prefWidth="577.0" spacing="8.0">
                <children>
-                  <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="538.0" spacing="10.0">
+                  <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="519.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="52.0" prefWidth="247.0" text="SUBJECT:" textFill="WHITE">
+                        <Label prefHeight="52.0" prefWidth="267.0" text="SUBJECT:" textFill="WHITE">
                            <font>
                               <Font name="Copperplate Gothic Bold" size="21.0" />
                            </font>
                         </Label>
-                        <TextField alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="298.0" />
+                        <TextField alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="304.0" />
                      </children>
                   </HBox>
-                  <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="538.0" spacing="10.0">
+                  <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="577.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="52.0" prefWidth="507.0" text="NO REPEAT" textFill="WHITE">
+                        <Label prefHeight="52.0" prefWidth="535.0" text="NO REPEAT" textFill="WHITE">
                            <font>
                               <Font name="Copperplate Gothic Bold" size="21.0" />
                            </font>
                         </Label>
-                        <CheckBox alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="40.0" prefWidth="33.0" scaleX="2.0" scaleY="2.0" />
+                        <CheckBox mnemonicParsing="false" prefHeight="45.0" prefWidth="38.0" scaleX="1.5" scaleY="1.5" />
                      </children>
                   </HBox>
                   <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="538.0" spacing="10.0">
@@ -56,10 +55,10 @@
             </VBox>
          </children>
       </AnchorPane>
-      <Button layoutX="246.0" layoutY="393.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="START QUESTIONS" />
-      <Label layoutX="246.0" layoutY="86.0" prefHeight="35.0" prefWidth="130.0" text="QUESTIONS" textFill="WHITE">
+      <Button layoutX="235.0" layoutY="403.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="START TEST" />
+      <Label layoutX="148.0" layoutY="65.0" prefHeight="52.0" prefWidth="305.0" text="RANDOMIZE QUESITONS" textFill="WHITE">
          <font>
-            <Font name="Copperplate Gothic Bold" size="18.0" />
+            <Font name="Copperplate Gothic Bold" size="21.0" />
          </font>
       </Label>
    </children>
