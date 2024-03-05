@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.exampracticeapp.Controller.DataController"
-            prefHeight="574.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="574.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exampracticeapp.Controller.DataController">
+   <children>
+      <ListView layoutX="26.0" layoutY="69.0" prefHeight="291.0" prefWidth="134.0" />
+      <Label layoutX="26.0" layoutY="42.0" text="PREVIOUS TESTS" />
+      <Label layoutX="241.0" layoutY="42.0" text="TEST NAME" />
+      <Label layoutX="497.0" layoutY="50.0" text="from type " />
+      <TableView layoutX="189.0" layoutY="79.0" prefHeight="383.0" prefWidth="397.0">
+        <columns>
+          <TableColumn prefWidth="147.3332977294922" text="Question" />
+          <TableColumn prefWidth="153.3333740234375" text="Answer" />
+            <TableColumn prefWidth="95.33334350585938" text="Corectitudine" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
