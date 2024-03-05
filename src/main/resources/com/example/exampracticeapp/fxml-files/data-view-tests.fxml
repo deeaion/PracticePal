@@ -1,24 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="574.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exampracticeapp.Controller.DataController">
    <children>
-      <ListView layoutX="26.0" layoutY="69.0" prefHeight="291.0" prefWidth="134.0" />
+      <ListView fx:id="list_tests" layoutX="26.0" layoutY="69.0" prefHeight="291.0" prefWidth="134.0" />
       <Label layoutX="26.0" layoutY="42.0" text="PREVIOUS TESTS" />
-      <Label layoutX="241.0" layoutY="42.0" text="TEST NAME" />
-      <Label layoutX="497.0" layoutY="50.0" text="from type " />
+      <Label fx:id="lbl_test_name" layoutX="241.0" layoutY="42.0" text="TEST NAME" />
+      <Label fx:id="lbl_test_type" layoutX="497.0" layoutY="50.0" text="from type " />
       <TableView layoutX="189.0" layoutY="79.0" prefHeight="383.0" prefWidth="397.0">
         <columns>
-          <TableColumn prefWidth="147.3332977294922" text="Question" />
-          <TableColumn prefWidth="153.3333740234375" text="Answer" />
-            <TableColumn prefWidth="95.33334350585938" text="Corectitudine" />
+          <TableColumn fx:id="tblCol_question" prefWidth="159.99998474121094" text="Question" />
+          <TableColumn fx:id="tblCol_answer" prefWidth="141.33331298828125" text="Answer" />
+            <TableColumn fx:id="tblCol_veracity" prefWidth="95.33334350585938" text="Veracity" />
         </columns>
       </TableView>
+      <Label layoutX="14.0" layoutY="374.0" text="FILTER" />
+      <VBox layoutX="13.0" layoutY="404.0" prefHeight="81.0" prefWidth="165.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="140.0">
+               <children>
+                  <Label text="SUBJECT" />
+                  <TextField fx:id="txt_subject" prefHeight="25.0" prefWidth="119.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="140.0">
+               <children>
+                  <Label text="TYPE" />
+                  <TextField fx:id="txt_type" prefHeight="25.0" prefWidth="119.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="140.0">
+               <children>
+                  <Label text="DATE" />
+                  <TextField fx:id="txt_date" prefHeight="25.0" prefWidth="119.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ComboBox fx:id="cbx_veracity" layoutX="422.0" layoutY="473.0" prefWidth="150.0" promptText="VERACITY FILTER" />
    </children>
 </AnchorPane>

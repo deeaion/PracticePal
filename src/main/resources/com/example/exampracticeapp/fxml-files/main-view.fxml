@@ -16,12 +16,12 @@
          <top>
             <AnchorPane prefHeight="26.0" prefWidth="800.0" style="-fx-background-color: #1a366e;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView blendMode="OVERLAY" fitHeight="40.0" fitWidth="40.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img_settings" blendMode="OVERLAY" fitHeight="40.0" fitWidth="40.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/icon/settings-icon.png" />
                      </image>
                   </ImageView>
-                  <ImageView blendMode="OVERLAY" fitHeight="40.0" fitWidth="40.0" layoutX="746.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img_closeApp" blendMode="OVERLAY" fitHeight="40.0" fitWidth="40.0" layoutX="746.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/icon/close-button-icon.png" />
                      </image>
@@ -33,21 +33,19 @@
                <children>
                   <VBox alignment="CENTER" layoutX="7.0" layoutY="99.0" prefHeight="307.0" prefWidth="185.0" style="-fx-background-color: #1a366e;">
                      <children>
-                        <Button fx:id="HomeButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="HOME" textFill="WHITE" />
-                        <Button fx:id="PracticeButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="PRACTICE TESTS" textFill="WHITE" />
-                        <Button fx:id="RandomizeButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="RANDOMIZE" textFill="WHITE" />
+                        <Button fx:id="btn_home" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="HOME" textFill="WHITE" />
+                        <Button fx:id="btn_practice" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="PRACTICE TESTS" textFill="WHITE" />
+                        <Button fx:id="btn_randomize" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="RANDOMIZE" textFill="WHITE" />
                         <Separator prefHeight="10.0" prefWidth="185.0" />
-                        <SplitMenuButton fx:id="DataButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="41.0" prefWidth="185.0" style="-fx-background-color: #1a366e;" text="DATA" textAlignment="CENTER">
+                        <SplitMenuButton fx:id="btn_data" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="41.0" prefWidth="185.0" style="-fx-background-color: #1a366e;" text="DATA" textAlignment="CENTER">
                           <items>
-                            <MenuItem fx:id="ChapterButtonSwitch" mnemonicParsing="false" text="Chapter" />
-                            <MenuItem fx:id="SubjectButtonSwitch" mnemonicParsing="false" text="Subject" />
-                              <MenuItem fx:id="QuestionButtonSwitch" mnemonicParsing="false" text="Question" />
-                              <MenuItem fx:id="AnswerButtonSwitch" mnemonicParsing="false" text="Answer" />
-                              <MenuItem fx:id="HintsButtonSwitch" mnemonicParsing="false" text="Hints" />
+                            <MenuItem fx:id="btn_data_subject" mnemonicParsing="false" text="Subject" />
+                              <MenuItem fx:id="btn_data_question" mnemonicParsing="false" text="Question" />
+                              <MenuItem fx:id="btn_data_previous" mnemonicParsing="false" text="Previous Tests Results" />
                           </items>
                         </SplitMenuButton>
-                        <Button fx:id="ImportDataButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="IMPORT DATA" textFill="WHITE" />
-                        <Button fx:id="SettingsButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="SETTINGS" textFill="WHITE" />
+                        <Button fx:id="btn_import_data" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="IMPORT DATA" textFill="WHITE" />
+                        <Button fx:id="btn_settings" mnemonicParsing="false" prefHeight="49.0" prefWidth="216.0" style="-fx-background-color: #1a366e;" text="SETTINGS" textFill="WHITE" />
                      </children>
                   </VBox>
                </children>
