@@ -9,6 +9,7 @@ import com.example.exampracticeapp.Repository.DBRepositories.Util.DataBaseAccess
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -61,19 +62,20 @@ public class StartApplication extends Application {
     }
     private void initView(Stage primaryStage) throws IOException {
         FXMLLoader stageLoader=new FXMLLoader();
-        stageLoader.setLocation(getClass().getResource("/com/example/exampracticeapp/Controller/MainViewController.java"));
+        stageLoader.setLocation(getClass().getResource("/com/example/exampracticeapp/fxml-files/main-view.fxml"));
         AnchorPane setLayout=stageLoader.load();
         primaryStage.setTitle("Exam Practice Application");
-
+        Scene scene = new Scene(setLayout);
+        primaryStage.setScene(scene);
         //loading the fxml file
         MainController mainViewController=stageLoader.getController();
-//        mainViewController.setMainViewController()
+        mainViewController.setMainViewController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,primaryStage);
     }
     public void start(Stage primaryStage) throws Exception {
         setDataBase();
         setDBRepositories();
         testRepositories();
-
+        initView(primaryStage);
         primaryStage.show();
 }
 
