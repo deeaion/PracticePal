@@ -21,7 +21,7 @@
                               <Font name="Copperplate Gothic Bold" size="21.0" />
                            </font>
                         </Label>
-                        <TextField alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="304.0" />
+                        <TextField fx:id="txt_subject" alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="304.0" />
                      </children>
                   </HBox>
                   <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="567.0" spacing="10.0">
@@ -31,7 +31,7 @@
                               <Font name="Copperplate Gothic Bold" size="21.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="35.0" prefWidth="309.0" />
+                        <TextField fx:id="txt_nrOfQuestions" prefHeight="35.0" prefWidth="309.0" />
                      </children>
                   </HBox>
                   <HBox alignment="BASELINE_RIGHT" prefHeight="67.0" prefWidth="538.0" spacing="10.0">
@@ -41,19 +41,19 @@
                               <Font name="Copperplate Gothic Bold" size="21.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="35.0" prefWidth="131.0" />
+                        <TextField fx:id="txt_fromChapters" prefHeight="35.0" prefWidth="131.0" />
                         <Label prefHeight="23.0" prefWidth="40.0" text="TO" textFill="WHITE">
                            <font>
                               <Font name="Copperplate Gothic Bold" size="19.0" />
                            </font></Label>
-                        <TextField prefHeight="35.0" prefWidth="131.0" />
+                        <TextField fx:id="txt_toChapters" prefHeight="35.0" prefWidth="131.0" />
                      </children>
                   </HBox>
                </children>
             </VBox>
          </children>
       </AnchorPane>
-      <Button layoutX="235.0" layoutY="399.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="START TEST" />
+      <Button fx:id="btn_StartTest" layoutX="235.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleStartTest" prefHeight="40.0" prefWidth="130.0" text="START TEST" />
       <Label alignment="TOP_CENTER" layoutX="176.0" layoutY="65.0" prefHeight="52.0" prefWidth="247.0" text="Practice tests" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Copperplate Gothic Bold" size="21.0" />

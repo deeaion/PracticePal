@@ -37,6 +37,8 @@ public class StartApplication extends Application {
     private DBQuestionRepository questionRepository;
     private DBAnswerRepository answerRepository;
     private DBAnswerIdeaRepository answerIdeaRepository;
+    private DBTestAnswerRepository testAnswerRepository;
+    private DBTestResultsRepository testResultsRepository;
     private void setDBRepositories(){
         DatabaseRepoFactory repoFactory=new DatabaseRepoFactory(data);
         setValidators();
@@ -45,6 +47,8 @@ public class StartApplication extends Application {
         this.questionRepository= (DBQuestionRepository) repoFactory.createRepository(DataBaseRepositoryStrategy.QUESTION,null);
         this.answerRepository= (DBAnswerRepository) repoFactory.createRepository(DataBaseRepositoryStrategy.ANSWER,null);
         this.answerIdeaRepository= (DBAnswerIdeaRepository) repoFactory.createRepository(DataBaseRepositoryStrategy.ANSWERIDEA,null);
+        this.testAnswerRepository=new DBTestAnswerRepository(null,data,"testAnswer");
+        this.testResultsRepository=new DBTestResultsRepository(null,data,"testResults");
 
     }
 
@@ -69,7 +73,7 @@ public class StartApplication extends Application {
         primaryStage.setScene(scene);
         //loading the fxml file
         MainController mainViewController=stageLoader.getController();
-        mainViewController.setMainViewController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,primaryStage);
+        mainViewController.setMainViewController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
     }
     public void start(Stage primaryStage) throws Exception {
         setDataBase();

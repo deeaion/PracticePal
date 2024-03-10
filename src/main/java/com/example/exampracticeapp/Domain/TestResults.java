@@ -9,10 +9,20 @@ import java.util.Objects;
 public class TestResults extends Entity<Long>{
     LocalDateTime timeStamp ;
     TestType testType;
+    Subject subject;
 
-    public TestResults(LocalDateTime timeStamp, TestType testType) {
+    public TestResults(LocalDateTime timeStamp, TestType testType, Subject subject) {
         this.timeStamp = timeStamp;
         this.testType = testType;
+        this.subject=subject;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
     }
 
     public LocalDateTime getTimeStamp() {

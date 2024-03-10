@@ -7,11 +7,22 @@ public class TestAnswer extends Entity<Long>
     Question question;
     String answer;
     String veracity;
+    TestResults correspondingTest;
 
-    public TestAnswer(Question question, String answer, String veracity) {
+
+    public TestAnswer(Question question, String answer, String veracity,TestResults correspondingTest) {
         this.question = question;
         this.answer = answer;
         this.veracity = veracity;
+        this.correspondingTest=correspondingTest;
+    }
+
+    public TestResults getCorrespondingTest() {
+        return correspondingTest;
+    }
+
+    public void setCorrespondingTest(TestResults correspondingTest) {
+        this.correspondingTest = correspondingTest;
     }
 
     public Question getQuestion() {

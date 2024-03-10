@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="574.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exampracticeapp.Controller.DataController">
+<AnchorPane prefHeight="574.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exampracticeapp.Controller.DataPracticeTestsController">
    <children>
       <ListView fx:id="list_tests" layoutX="26.0" layoutY="69.0" prefHeight="291.0" prefWidth="134.0" />
       <Label layoutX="26.0" layoutY="42.0" text="PREVIOUS TESTS" />
