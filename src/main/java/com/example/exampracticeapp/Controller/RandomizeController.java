@@ -1,6 +1,7 @@
 package com.example.exampracticeapp.Controller;
 
 import com.example.exampracticeapp.Repository.DBRepositories.EntitiesRepositories.*;
+import com.example.exampracticeapp.Service.Service;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -24,6 +25,7 @@ public class RandomizeController {
 
     @FXML
     private TextField txt_subject;
+    private Service service;
 
     @FXML
     void handleStartingTest(ActionEvent event) {
@@ -37,18 +39,14 @@ public class RandomizeController {
     private DBTestResultsRepository testResultsRepository;
     private DBTestAnswerRepository testAnswerRepository;
     private Stage primaryStage;
-    public void setRandomizeMenuController(DBSubjectRepository subjectRepository, DBChapterRepository chapterRepository,
-                                               DBQuestionRepository questionRepository, DBAnswerRepository answerRepository,
-                                               DBAnswerIdeaRepository answerIdeaRepository, DBTestAnswerRepository testAnswerRepository,DBTestResultsRepository testResultsRepository,
+
+    public void setRandomizeMenuController(Service service,
                                                Stage primaryStage)
     {
-        this.subjectRepository=subjectRepository;
-        this.questionRepository=questionRepository;
-        this.answerRepository=answerRepository;
-        this.answerIdeaRepository=answerIdeaRepository;
-        this.chapterRepository=chapterRepository;
-        this.testResultsRepository=testResultsRepository;
-        this.testAnswerRepository=testAnswerRepository;
+        this.service=service;
         this.primaryStage=primaryStage;
+
     }
+
+
 }

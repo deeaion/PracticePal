@@ -7,6 +7,7 @@ import com.example.exampracticeapp.Repository.DBRepositories.Factory.DataBaseRep
 import com.example.exampracticeapp.Repository.DBRepositories.Factory.DatabaseRepoFactory;
 import com.example.exampracticeapp.Repository.DBRepositories.Util.DataBaseAccess;
 
+import com.example.exampracticeapp.Service.Service;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -73,7 +74,8 @@ public class StartApplication extends Application {
         primaryStage.setScene(scene);
         //loading the fxml file
         MainController mainViewController=stageLoader.getController();
-        mainViewController.setMainViewController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
+        Service service=new Service(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository);
+        mainViewController.setMainViewController(service,primaryStage);
     }
     public void start(Stage primaryStage) throws Exception {
         setDataBase();

@@ -1,6 +1,7 @@
 package com.example.exampracticeapp.Controller;
 
         import com.example.exampracticeapp.Repository.DBRepositories.EntitiesRepositories.*;
+        import com.example.exampracticeapp.Service.Service;
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
         import javafx.fxml.FXMLLoader;
@@ -16,26 +17,12 @@ package com.example.exampracticeapp.Controller;
         import java.io.IOException;
 
 public class MainController {
-    private DBSubjectRepository subjectRepository;
-    private DBChapterRepository chapterRepository;
-    private DBQuestionRepository questionRepository;
-    private DBAnswerRepository answerRepository;
-    private DBAnswerIdeaRepository answerIdeaRepository;
-    private DBTestResultsRepository testResultsRepository;
-    private DBTestAnswerRepository testAnswerRepository;
+    private Service service;
     private Stage primaryStage;
-    public void setMainViewController(DBSubjectRepository subjectRepository, DBChapterRepository chapterRepository,
-                                      DBQuestionRepository questionRepository, DBAnswerRepository answerRepository,
-                                      DBAnswerIdeaRepository answerIdeaRepository, DBTestAnswerRepository testAnswerRepository,DBTestResultsRepository testResultsRepository,
+    public void setMainViewController(Service  service,
                                       Stage primaryStage)
     {
-        this.subjectRepository=subjectRepository;
-        this.questionRepository=questionRepository;
-        this.answerRepository=answerRepository;
-        this.answerIdeaRepository=answerIdeaRepository;
-        this.chapterRepository=chapterRepository;
-        this.testResultsRepository=testResultsRepository;
-        this.testAnswerRepository=testAnswerRepository;
+        this.service=service;
         this.primaryStage=primaryStage;
         handleSwitchToHome(new ActionEvent());
     }
@@ -91,7 +78,7 @@ public class MainController {
         }
         borderPane.setCenter(view);
         WelcomeController welcomeController=stageLoader.getController();
-        welcomeController.setWelcomeController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
+        welcomeController.setWelcomeController(service,primaryStage);
     }
 
     @FXML
@@ -106,7 +93,7 @@ public class MainController {
         }
         borderPane.setCenter(view);
         ImportDataController importDataController=stageLoader.getController();
-        importDataController.setImportDataController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
+        importDataController.setImportDataController(service,primaryStage);
     }
 
     @FXML
@@ -121,7 +108,7 @@ public class MainController {
         }
         borderPane.setCenter(view);
         ImportDataController importDataController=stageLoader.getController();
-        importDataController.setImportDataController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
+        importDataController.setImportDataController(service,primaryStage);
     }
 
     @FXML
@@ -136,7 +123,7 @@ public class MainController {
         }
         borderPane.setCenter(view);
         DataQuestionsController dataQuestionsController=stageLoader.getController();
-        dataQuestionsController.setDataQuestionsController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
+        dataQuestionsController.setDataQuestionsController(service,primaryStage);
 
     }
     @FXML
@@ -151,7 +138,7 @@ public class MainController {
         }
         borderPane.setCenter(view);
         DataSubjectsController dataSubjectsController=stageLoader.getController();
-        dataSubjectsController.setDataSubjectsController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
+        dataSubjectsController.setDataSubjectsController(service,primaryStage);
 
     }
 
@@ -168,7 +155,7 @@ public class MainController {
         }
         borderPane.setCenter(view);
         RandomizeController randomizeController=stageLoader.getController();
-        randomizeController.setRandomizeMenuController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
+        randomizeController.setRandomizeMenuController(service,primaryStage);
 
     }
 
@@ -184,7 +171,7 @@ public class MainController {
         }
         borderPane.setCenter(view);
         SettingsController settingsController=stageLoader.getController();
-        settingsController.setSettingsController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
+        settingsController.setSettingsController(service,primaryStage);
 
     }
 
@@ -200,7 +187,7 @@ public class MainController {
         }
         borderPane.setCenter(view);
         DataPracticeTestsController dataPracticeTestsController=stageLoader.getController();
-        dataPracticeTestsController.setDataPracticeTestsController(subjectRepository,chapterRepository,questionRepository,answerRepository,answerIdeaRepository,testAnswerRepository,testResultsRepository,primaryStage);
+        dataPracticeTestsController.setDataPracticeTestsController(service,primaryStage);
 
     }
 

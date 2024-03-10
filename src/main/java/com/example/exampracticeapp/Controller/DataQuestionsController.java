@@ -1,6 +1,7 @@
 package com.example.exampracticeapp.Controller;
 
 import com.example.exampracticeapp.Repository.DBRepositories.EntitiesRepositories.*;
+import com.example.exampracticeapp.Service.Service;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -58,19 +59,14 @@ public class DataQuestionsController {
     private DBTestResultsRepository testResultsRepository;
     private DBTestAnswerRepository testAnswerRepository;
     private Stage primaryStage;
-    public void setDataQuestionsController(DBSubjectRepository subjectRepository, DBChapterRepository chapterRepository,
-                                               DBQuestionRepository questionRepository, DBAnswerRepository answerRepository,
-                                               DBAnswerIdeaRepository answerIdeaRepository, DBTestAnswerRepository testAnswerRepository,DBTestResultsRepository testResultsRepository,
+    private Service service;
+
+    public void setDataQuestionsController(Service service,
                                                Stage primaryStage)
     {
-        this.subjectRepository=subjectRepository;
-        this.questionRepository=questionRepository;
-        this.answerRepository=answerRepository;
-        this.answerIdeaRepository=answerIdeaRepository;
-        this.chapterRepository=chapterRepository;
-        this.testResultsRepository=testResultsRepository;
-        this.testAnswerRepository=testAnswerRepository;
+        this.service=service;
         this.primaryStage=primaryStage;
+
     }
 
 }

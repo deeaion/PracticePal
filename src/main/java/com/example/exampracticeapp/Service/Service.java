@@ -21,13 +21,18 @@ public class Service implements Observable<ChangeEvent> {
     private Repository chapterRepository;
     private Repository questionRepository;
     private Repository answerRepository;
+    private Repository testAnswerRepository;
+    private Repository testResultsRepository;
 
-    public Service(Repository subjectRepository, Repository chapterRepository, Repository questionRepository, Repository answerRepository, Repository answerIdeaRepository) {
+    public Service(Repository subjectRepository, Repository chapterRepository, Repository questionRepository, Repository answerRepository, Repository answerIdeaRepository
+    ,Repository testAnswerRepository,Repository testResultsRepository) {
         this.subjectRepository = subjectRepository;
         this.chapterRepository = chapterRepository;
         this.questionRepository = questionRepository;
         this.answerRepository = answerRepository;
         this.answerIdeaRepository = answerIdeaRepository;
+        this.testAnswerRepository=testAnswerRepository;
+        this.testResultsRepository=testResultsRepository;
     }
 
     private Repository answerIdeaRepository;

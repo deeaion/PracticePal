@@ -1,6 +1,7 @@
 package com.example.exampracticeapp.Controller;
 
 import com.example.exampracticeapp.Repository.DBRepositories.EntitiesRepositories.*;
+import com.example.exampracticeapp.Service.Service;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,6 +24,7 @@ public class PracticeTestsController {
 
     @FXML
     private TextField txt_toChapters;
+    private Service service;
 
     @FXML
     void handleStartTest(ActionEvent event) {
@@ -36,18 +38,11 @@ public class PracticeTestsController {
     private DBTestResultsRepository testResultsRepository;
     private DBTestAnswerRepository testAnswerRepository;
     private Stage primaryStage;
-    public void setPracticeTestMenuController(DBSubjectRepository subjectRepository, DBChapterRepository chapterRepository,
-                                               DBQuestionRepository questionRepository, DBAnswerRepository answerRepository,
-                                               DBAnswerIdeaRepository answerIdeaRepository, DBTestAnswerRepository testAnswerRepository,DBTestResultsRepository testResultsRepository,
+    public void setDataPracticeTestsController(Service service,
                                                Stage primaryStage)
     {
-        this.subjectRepository=subjectRepository;
-        this.questionRepository=questionRepository;
-        this.answerRepository=answerRepository;
-        this.answerIdeaRepository=answerIdeaRepository;
-        this.chapterRepository=chapterRepository;
-        this.testResultsRepository=testResultsRepository;
-        this.testAnswerRepository=testAnswerRepository;
+        this.service=service;
         this.primaryStage=primaryStage;
+
     }
 }
